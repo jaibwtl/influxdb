@@ -23,3 +23,9 @@ influx v1 shell
 > select min(humidity) from "airSensors" where sensor_id = 'TLM0100' 
 > select mean(humidity) from "airSensors" where sensor_id = 'TLM0100' 
 > select count(*) from "airSensors" where sensor_id = 'TLM0100'
+
+## Start Grafana 
+docker ps 
+docker run -d --name=grafana -p 3000:3000 grafana/grafana
+# Open http://IP:3000
+# User: admin Password: admin
